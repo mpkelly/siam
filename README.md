@@ -101,7 +101,7 @@ elements
         borderRadius sm # New property which automatically maps to the new tokens above
 ```
 
-As well as `aliases` we added `elements`. Elements are made up of properties which typically get their values from tokens - you can also just constant property values but it's not recommended. Elements also support modifiers and states but these are not used above. We have created only a single button element. Here's an example of how it might look if you choose the HTML & CSS Target:
+As well as `aliases` we added `elements`. Elements are made up of properties which typically get their values from tokens - you can also use constant property values but it's not recommended. Elements also support modifiers and states but these are not used above. We have created only a single button element. Here's an example of how it might look if you choose the HTML & CSS Target:
 
 ```CSS
 :root {
