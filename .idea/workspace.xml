@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1nbVQRhx0ri4oEmMN44qr5HfMz5" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/packages/siam/siam/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="" />
+      <created>1611658760964</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611658760964</updated>
+      <workItem from="1611658762249" duration="6121000" />
+      <workItem from="1611739353373" duration="2672000" />
+    </task>
+    <task id="LOCAL-00001" summary="Start on README docs">
+      <created>1611741733738</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611741733738</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Start on README docs">
+      <created>1611741851909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611741851909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Start on README docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start on README docs" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1124" y="315" width="780" height="456" key="#Markdown" timestamp="1611660252836">
+      <screen x="-1920" y="-113" width="1920" height="1057" />
+    </state>
+    <state x="-1124" y="315" width="780" height="456" key="#Markdown/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611660252836" />
+    <state x="-1451" y="54" key="SettingsEditor" timestamp="1611660276000">
+      <screen x="-1920" y="-113" width="1920" height="1057" />
+    </state>
+    <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611660276000" />
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611741735924">
+      <screen x="-1920" y="-113" width="1920" height="1057" />
+    </state>
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611741735924" />
+  </component>
+</project>
