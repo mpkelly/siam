@@ -4,14 +4,14 @@ Siam allows you define design tokens and elements (e.g. buttons, checkboxes etc)
 
 ## What kind of problems does it solve?
 
-- Serves as a master source for design tokens and elements. Target multiple SDKs from the same single source. 
+- Serves as a master source for design tokens and elements. Target multiple SDKs from the same single source.
 - The libraries we use change often: Angular 1, React JS, Angular 2, Vue etc; but the component styles we use are stable: solid buttons, round buttons, outline button etc. Each time a new library emerges, Siam just needs an adapter to convert existing Systems into usable code for that library.
 - Tired of every app or site looking like Popular Component library with the only the color scheme changed? Siam makes it easy to quickly create something unique. You can also combine existing library tokens and elements into your own unique System.
 - Siam is designer and developer friendly. Everyone can use the same master source.
 
 ## What does it look like?
 
-At the heart of Siam is a System file. Let's start with a basic System written in JSON. 
+At the heart of Siam is a System file. Let's start with a basic System written in JSON.
 
 ```JSON
 {
@@ -34,7 +34,7 @@ const Theme = {
        "primary.text": "black"
     }
 }
-``` 
+```
 
 ```XML
 /** An android Colors resource file **/
@@ -43,9 +43,9 @@ const Theme = {
     <color name="primary">red</color>
     <color name="primary_text">black</color>
 </resources>
-``` 
+```
 
-Developers that know JavaScript can easily register their own adapter plugin which can target any system or SDK they want, including custom systems. Here we are just outputting code but Siam could just as easily output Figma or Sketch files for designers to use as their starting point. 
+Developers that know JavaScript can easily register their own adapter plugin which can target any system or SDK they want, including custom systems. Here we are just outputting code but Siam could just as easily output Figma or Sketch files for designers to use as their starting point.
 
 ## How can you define Systems?
 
@@ -55,10 +55,10 @@ You can write JSON, JavaScript or TypeScript. You can also use Siam's internal t
 tokens
     colors
         primary red
-        light.text white 
+        light.text white
 ```
 
-Siam also provides an editor with validation and code completion which makes creating new systems very efficient. 
+Siam also provides an editor with validation and code completion which makes creating new systems very efficient.
 
 ## A closer look at the System schema
 
@@ -67,11 +67,11 @@ As well as tokens we can create elements and aliases in our System. A slightly m
 ```YAML
 aliases
     tokens
-        colors backgroundColor, color 
+        colors backgroundColor, color
 tokens
     colors
         primary red
-        light.text white 
+        light.text white
 elements
     button
         color light.text
@@ -81,19 +81,19 @@ elements
 
 #### A breakdown of the System above
 
-Aliases map element property names onto token objects. The above System uses common names from CSS: `background-color` and `color` but in camel-case. The adapter code that will convert this system to something usable needs this mapping to be able to look-up color tokens. You can see that button `backgroundColor` property is "primary" which is a color token above. We need an alias here because colors can be mapped onto many properties: `color`, `backgroundColor`, `leftBorderColor` etc. In general though the token name should be named exactly as the property it maps to e.g. `borderRadius`. This convention means that you will not need so many token aliases in your System. Let's add `borderRadius` now: 
+Aliases map element property names onto token objects. The above System uses common names from CSS: `background-color` and `color` but in camel-case. The adapter code that will convert this system to something usable needs this mapping to be able to look-up color tokens. You can see that button `backgroundColor` property is "primary" which is a color token above. We need an alias here because colors can be mapped onto many properties: `color`, `backgroundColor`, `leftBorderColor` etc. In general though the token name should be named exactly as the property it maps to e.g. `borderRadius`. This convention means that you will not need so many token aliases in your System. Let's add `borderRadius` now:
 
 ```YAML
 aliases
     tokens
-        colors backgroundColor, color 
+        colors backgroundColor, color
 tokens
     colors
         primary red
         light.text white
     borderRadius # New tokens
         sm 3
-        md 6 
+        md 6
 elements
     button
         color light.text
@@ -118,4 +118,4 @@ button {
 }
 ```
 
-This is obviously not a very good button but we can at least what's possible with Siam.
+This is obviously not a very good button but we can at least see what's possible with Siam.
