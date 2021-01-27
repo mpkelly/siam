@@ -24,7 +24,7 @@ At the heart of Siam is a System file. Let's start with a basic System written i
 }
 ```
 
-The above doesn't define much but it is still a valid System. You can take this file and export it to one or more targets. Let's see some examples:
+The above doesn't define much but it is still a valid System. You can take this file and export it to one or more Targets. Let's see some example outputs:
 
 ```JavaScript
 // A JavaScript object that could used as a theme with libraries like Emotion or Styled Components
@@ -101,7 +101,7 @@ elements
         borderRadius sm # New property which automatically maps to the new tokens above
 ```
 
-As well as `aliases` we added `elements`. Elements are made up of properties which are typically composed from tokens (you can also just hardcoded property values but it's not recommended). Elements also support modifiers and states but these are not used above. We have created only a single button element. Here's an example of how it might look if you choose the HTML & CSS Target:
+As well as `aliases` we added `elements`. Elements are made up of properties which typically get their values from tokens - you can also just constant property values but it's not recommended. Elements also support modifiers and states but these are not used above. We have created only a single button element. Here's an example of how it might look if you choose the HTML & CSS Target:
 
 ```CSS
 :root {
