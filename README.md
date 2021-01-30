@@ -23,7 +23,7 @@ At the heart of Siam is a System file. Let's start with a basic System written i
     "tokens": {
         "colors": {
             "primary": "blue",
-            "primary.text": "black",
+            "primaryText": "black",
         }
      }
 }
@@ -36,7 +36,7 @@ The above doesn't define much but it is still a valid System. You can take this 
 const Theme = {
     colors: {
        primary:"blue",
-       "primary.text": "black"
+       "primaryText": "black"
     }
 }
 ``` 
@@ -46,7 +46,7 @@ const Theme = {
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primary">blue</color>
-    <color name="primary_text">black</color>
+    <color name="primaryText">black</color>
 </resources>
 ``` 
 
@@ -60,7 +60,7 @@ You can write JSON, JavaScript or TypeScript. You can also use Siam's internal t
 tokens
     colors
         primary blue
-        light.text white 
+        lightText white 
 ```
 
 Siam also provides an editor with validation and code completion which makes creating new Systems very efficient. 
@@ -72,7 +72,7 @@ As well as tokens we can create elements and aliases in our System. A slightly m
 ```YAML
 aliases
     tokens
-        colors backgroundColor, color 
+        colors backgroundColor,color 
 tokens
     colors
         primary blue
@@ -86,16 +86,16 @@ elements
 
 #### A breakdown of the System above
 
-Aliases map element property names onto token objects. The above System uses common names from CSS: `background-color` and `color` but in camel-case. The adapter code that will convert this system to something usable needs this mapping to be able to look-up color tokens. You can see that button `backgroundColor` property is "primary" which is a color token above. We need an alias here because colors can be mapped onto many properties: `color`, `backgroundColor`, `leftBorderColor` etc. In general though the token name should be named exactly as the property it maps to e.g. `borderRadius`. This convention means that you will not need so many token aliases in your System. Let's add `borderRadius` now: 
+Aliases map element property names onto token objects. The above System uses common names from CSS: `background-color` and `color` but in camel-case. The adapter code that will convert this system to something usable needs this mapping to be able to look-up color tokens. You can see that button `backgroundColor` property is "primary" which is a color token above. We need an alias here because colors can be mapped onto many properties: `color`, `backgroundColor`, `leftBorderColor` etc. In general, the token name should be named exactly as the property it maps to e.g. `borderRadius`. This convention means that you will not need so many token aliases in your System. Let's add `borderRadius` now: 
 
 ```YAML
 aliases
     tokens
-        colors backgroundColor, color 
+        colors backgroundColor,color 
 tokens
     colors
         primary blue
-        light.text white
+        lightText white
     borderRadius # New tokens
         sm 3
         md 6 
@@ -132,8 +132,8 @@ Many elements have different states: disabled, focus, hover etc. Some elements a
 ```YAML
 aliases
     tokens
-        colors backgroundColor, color
-        sizes width, height 
+        colors backgroundColor,color
+        sizes width,height 
 tokens
     colors
         primary blue
@@ -150,13 +150,15 @@ elements
         borderRadius sm 
         color lightText
         roles # new modifier for roles
-          primary 
+          primary # new role type - primary.
             backgroundColor primary  
-          danger
+          danger # like primary above
             backgroundColor danger    
-        size # new modifier for roles
-          regular controlRegularHeight
-          large controlLargeHeight
+        size # new modifier for size
+          regular 
+            height controlRegularHeight
+          large 
+            height controlLargeHeight
 ```
 
 This is still a very basic System but it can now produce multiple buttons styles thanks to using modifiers. Let look at the output:
@@ -209,13 +211,13 @@ The above is just for illustration purposes. A good Target adapter will default 
 
 # Adding element state styles
 
-We will now modify our System so that the buttons support states. We will just add the hover state. Notice that we use a colon before the state name? This is the same as in CSS.
+We will now modify our System so that the buttons support states. We will just add the hover state for now. Notice that we use a colon before the state name? This is the same as in CSS.
 
 
 ```YAML
 aliases
     tokens
-        colors backgroundColor, color
+        colors backgroundColor,color
         sizes width, height 
 tokens
     colors
@@ -244,8 +246,10 @@ elements
             :hover 
               backgroundColor dangerDark
         size 
-          regular controlRegularHeight
-          large controlLargeHeight
+          regular 
+            height controlRegularHeight
+          large 
+            height controlLargeHeight
 ```
 
 And here's the output:
