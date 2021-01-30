@@ -243,7 +243,7 @@ elements
               backgroundColor primaryDark
           danger
             backgroundColor danger
-            :hover 
+            :hover # as above
               backgroundColor dangerDark
         size 
           regular 
@@ -276,7 +276,8 @@ button.primary {
     background-color: var(--color-primary);
 }
 
-button.primary:hover { // Our new hover style
+/** Our new hover style **/
+button.primary:hover { 
     background-color: var(--color-primary-dark);
 }
 
@@ -284,6 +285,7 @@ button.danger {
     background-color: var(--color-danger);
 }
 
+/** Our new hover style **/
 button.danger:hover {
     background-color: var(--color-danger-dark);
 }
