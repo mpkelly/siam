@@ -36,7 +36,7 @@ The above doesn't define much but it is still a valid System. You can take this 
 const Theme = {
     colors: {
        primary:"blue",
-       "primaryText": "black"
+       primaryText: "black"
     }
 }
 ``` 
