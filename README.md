@@ -227,23 +227,23 @@ tokens
     borderRadius 
         sm 3
         md 6 
-    sizes # new tokens. Like colors, sizes can map onto many properties so we need an alias above
+    sizes 
         controlRegularHeight 40
         controlLargeHeight 50
 elements
     button
         borderRadius sm 
         color lightText        
-        roles # new modifier for roles
+        roles 
           primary 
             backgroundColor primary
-            :hover 
+            :hover # change background on hover
               backgroundColor primaryDark
           danger
             backgroundColor danger
             :hover 
               backgroundColor dangerDark
-        size # new modifier for roles
+        size 
           regular controlRegularHeight
           large controlLargeHeight
 ```
@@ -272,7 +272,7 @@ button.primary {
     background-color: var(--color-primary);
 }
 
-button.primary:hover {
+button.primary:hover { // Our new hover style
     background-color: var(--color-primary-dark);
 }
 
