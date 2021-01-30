@@ -218,7 +218,7 @@ We will now modify our System so that the buttons support states. We will just a
 aliases
     tokens
         colors backgroundColor,color
-        sizes width, height 
+        sizes width,height 
 tokens
     colors
         primary blue
