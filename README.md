@@ -209,7 +209,7 @@ The above is just for illustration purposes. A good Target adapter will default 
 
 # Adding element state styles
 
-We will now modify our System so the buttons support states. We will just add the hover state. Notice that we use a colon before the state name? This is the same as in CSS.
+We will now modify our System so that the buttons support states. We will just add the hover state. Notice that we use a colon before the state name? This is the same as in CSS.
 
 
 ```YAML
@@ -294,3 +294,11 @@ button.large {
 ```
 
 To wrap-up, we've covered tokens, token aliases and elements that used modifiers and states. Siam can do even more but even with just the above you can define complex design systems. 
+
+# Contributing
+
+1. At the project root run `npm install` to install `lerna`
+2. Next run `npx lerna bootstrap` to install dependencies for `<root>/packages/*`.
+3. Navigate to the package, e.g. `cd packages/siam`, and then use `tsdx` commands to develop and test the package, as shown [here](https://github.com/formium/tsdx#quick-start) 
+
+Please add new packages using [tsdx](https://github.com/formium/tsdx#npm-start-or-yarn-start) to keep things consistent. You can run `npx tsdx create package-name` in the `<root>/packages` folder to create a new lerna package.  
