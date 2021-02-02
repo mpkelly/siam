@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +22,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="1nbVQRhx0ri4oEmMN44qr5HfMz5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,10 +42,14 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/packages/siam/siam/node_modules/typescript/lib" />
+    <property name="run.prettier.on.save" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/packages/siam/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/siam/src/features/system" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -52,7 +63,10 @@
       <option name="presentableId" value="Default" />
       <updated>1611658760964</updated>
       <workItem from="1611658762249" duration="6121000" />
-      <workItem from="1611739353373" duration="3223000" />
+      <workItem from="1611739353373" duration="4221000" />
+      <workItem from="1611922145037" duration="11770000" />
+      <workItem from="1612146605753" duration="358000" />
+      <workItem from="1612272995258" duration="2379000" />
     </task>
     <task id="LOCAL-00001" summary="Start on README docs">
       <created>1611741733738</created>
@@ -82,7 +96,35 @@
       <option name="project" value="LOCAL" />
       <updated>1611742614199</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update README">
+      <created>1611742658927</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611742658928</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update README">
+      <created>1611928593736</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611928593736</updated>
+    </task>
+    <task id="LOCAL-00007" summary="(feat) add SSFParser - an early version of the System file format parser.">
+      <created>1611983593598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611983593598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="(feat) add SSFParser - an early version of the System file format parser.">
+      <created>1612145078050</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612145078050</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,20 +145,33 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start on README docs" />
     <MESSAGE value="Update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
+    <MESSAGE value="(feat) add SSFParser - an early version of the System file format parser." />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add SSFParser - an early version of the System file format parser." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1124" y="315" width="780" height="456" key="#Markdown" timestamp="1611660252836">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
     <state x="-1124" y="315" width="780" height="456" key="#Markdown/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611660252836" />
-    <state x="-1451" y="54" key="SettingsEditor" timestamp="1611660276000">
+    <state x="-1252" y="91" width="919" height="649" key="#TypeScript" timestamp="1611982646353">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
-    <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611660276000" />
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611742618163">
+    <state x="-1252" y="91" width="919" height="649" key="#TypeScript/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611982646353" />
+    <state x="-1320" y="184" key="MultipleFileMergeDialog" timestamp="1611977356551">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611742618163" />
+    <state x="-1320" y="184" key="MultipleFileMergeDialog/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977356551" />
+    <state x="-1451" y="54" key="SettingsEditor" timestamp="1611977719924">
+      <screen x="-1920" y="-113" width="1920" height="1057" />
+    </state>
+    <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977719924" />
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1612145079783">
+      <screen x="-1920" y="-113" width="1920" height="1057" />
+    </state>
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612145079783" />
+    <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611977349715">
+      <screen x="-1920" y="-113" width="1920" height="1057" />
+    </state>
+    <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977349715" />
   </component>
 </project>
