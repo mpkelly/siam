@@ -301,6 +301,68 @@ button.large {
 
 To wrap-up, we've covered tokens, token aliases and elements that used modifiers and states. Siam can do even more but even with just the above you can define complex design systems. 
 
+## Other considerations
+
+We often use different sizes on different devices. Siam's standard Target adapters support five break point values: `xs, sm, md, lg, xl, xxl` which default to [Bootstrap's breakpoint values](https://getbootstrap.com/docs/5.0/layout/breakpoints/#available-breakpoints).
+
+The values default to the following widths:
+
+```
+  xs: < 576px,
+  sm: >= 576px,
+  md: >= 768px,
+  lg: >= 992px,
+  xl: >= 1200px,
+  xxl: >= 1400px
+```
+
+These breakpoints can be used on token values and property values. Let's take a look:
+
+```YAML
+aliases
+    tokens
+        colors backgroundColor,color 
+tokens
+    colors
+        primary blue
+        lightText white
+    borderRadius
+        sm
+          xs 2 # a 2px borderRadius by default
+          md 3 # on screens >= 768px wide, use 3px borderRadius
+          xl 5 # on screens >= 1200px wide, use 5px borderRadius
+        md
+          xs 5 
+          md 6
+          xl 8 
+elements
+    button
+        color lightText
+        backgroundColor primary
+        borderRadius sm # same as before but the value of `sm` will depend on the device width
+        height 
+          xs 40 # default the height to 40px
+          lg 50 # on screens >= 992px wide, use 50px height
+```
+
+If you want to override the breakpoint values then you can define your own on the system like so
+
+```
+breakpoints
+    xs 0
+    sm 600
+    md 900
+    lg 1000
+    xl 1300
+    xxl 1500
+aliases
+    ... 
+tokens
+    ...
+elements
+    ...
+```
+
 # Contributing
 
 1. At the project root run `npm install` to install `lerna`

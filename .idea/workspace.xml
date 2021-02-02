@@ -11,31 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/parse/TabIndentedDataParser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/system/SSFParser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/.github/workflows/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/.github/workflows/size.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/.github/workflows/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/.github/workflows/size.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/test/blah.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/siam/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/test/blah.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/siam" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +64,9 @@
       <updated>1611658760964</updated>
       <workItem from="1611658762249" duration="6121000" />
       <workItem from="1611739353373" duration="4221000" />
-      <workItem from="1611922145037" duration="11055000" />
+      <workItem from="1611922145037" duration="11770000" />
+      <workItem from="1612146605753" duration="358000" />
+      <workItem from="1612272995258" duration="2379000" />
     </task>
     <task id="LOCAL-00001" summary="Start on README docs">
       <created>1611741733738</created>
@@ -131,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611928593736</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="(feat) add SSFParser - an early version of the System file format parser.">
+      <created>1611983593598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1611983593598</updated>
+    </task>
+    <task id="LOCAL-00008" summary="(feat) add SSFParser - an early version of the System file format parser.">
+      <created>1612145078050</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612145078050</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +145,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start on README docs" />
     <MESSAGE value="Update README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README" />
+    <MESSAGE value="(feat) add SSFParser - an early version of the System file format parser." />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add SSFParser - an early version of the System file format parser." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1124" y="315" width="780" height="456" key="#Markdown" timestamp="1611660252836">
@@ -171,10 +165,10 @@
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
     <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977719924" />
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1611928778961">
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1612145079783">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611928778961" />
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612145079783" />
     <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611977349715">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
