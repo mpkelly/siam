@@ -345,7 +345,7 @@ elements
           lg 50 # on screens >= 992px wide, use 50px height
 ```
 
-If you want to override the breakpoint values then you can define your own on the system like so
+If you want to override the breakpoint values then you can define your own on the system like so:
 
 ```
 breakpoints
