@@ -11,16 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/Asset.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/PlatformAdapter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/Project.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CssAdapter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/responsive/Breakpoints.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/util/ConvertCase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/util/Object.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSystem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CssAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CssAdapter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +43,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
@@ -76,7 +70,7 @@
       <workItem from="1611922145037" duration="11770000" />
       <workItem from="1612146605753" duration="358000" />
       <workItem from="1612272995258" duration="2379000" />
-      <workItem from="1612585978356" duration="11844000" />
+      <workItem from="1612585978356" duration="12667000" />
     </task>
     <task id="LOCAL-00001" summary="Start on README docs">
       <created>1611741733738</created>
@@ -148,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612590506790</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="(feat) make a start on the CssAdapter which will allow for building apps with HTML + CSS using a system based on CSS variables and will also serve as an example for other adapter implementations.">
+      <created>1612605361032</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1612605361032</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +173,8 @@
     <MESSAGE value="(feat) add SSFParser - an early version of the System file format parser." />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update README.md and add System type with example system containing two elements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update README.md and add System type with example system containing two elements." />
+    <MESSAGE value="(feat) make a start on the CssAdapter which will allow for building apps with HTML + CSS using a system based on CSS variables and will also serve as an example for other adapter implementations." />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) make a start on the CssAdapter which will allow for building apps with HTML + CSS using a system based on CSS variables and will also serve as an example for other adapter implementations." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1124" y="315" width="780" height="456" key="#Markdown" timestamp="1611660252836">
@@ -196,14 +198,16 @@
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
     <state x="-1320" y="184" key="MultipleFileMergeDialog/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977356551" />
-    <state x="-1451" y="54" key="SettingsEditor" timestamp="1611977719924">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
+    <state x="352" y="162" key="SettingsEditor" timestamp="1612605967351">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977719924" />
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1612590508261">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
+    <state x="352" y="162" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1612605967351" />
+    <state x="420" y="245" key="Vcs.Push.Dialog.v2" timestamp="1612605363176">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612590508261" />
+    <state x="420" y="245" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612605363176" />
     <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611977349715">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
