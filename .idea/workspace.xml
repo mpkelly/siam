@@ -11,12 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/siam/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSchema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/Asset.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/PlatformAdapter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/Project.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CssAdapter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/responsive/Breakpoints.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/util/ConvertCase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/util/Object.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/system/SSFParser.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/system/SSFParser.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSchema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSystem.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/siam/src/features/css" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -51,11 +55,12 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/siam/src/features/css" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/siam/src/features/system" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -71,7 +76,7 @@
       <workItem from="1611922145037" duration="11770000" />
       <workItem from="1612146605753" duration="358000" />
       <workItem from="1612272995258" duration="2379000" />
-      <workItem from="1612585978356" duration="4097000" />
+      <workItem from="1612585978356" duration="11844000" />
     </task>
     <task id="LOCAL-00001" summary="Start on README docs">
       <created>1611741733738</created>
@@ -136,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612586011086</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update README.md and add System type with example system containing two elements.">
+      <created>1612590506790</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612590506790</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,10 +183,15 @@
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
     <state x="-1252" y="91" width="919" height="649" key="#TypeScript/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611982646353" />
-    <state x="-1264" y="224" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612589398253">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
+    <state x="492" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612602568520">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="-1264" y="224" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612589398253" />
+    <state x="492" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1612602568520" />
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1612599323301">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1612599323301" />
     <state x="-1320" y="184" key="MultipleFileMergeDialog" timestamp="1611977356551">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
@@ -183,10 +200,10 @@
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
     <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611977719924" />
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1612586013711">
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1612590508261">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612586013711" />
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612590508261" />
     <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611977349715">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>

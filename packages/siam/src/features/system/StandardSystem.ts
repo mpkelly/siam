@@ -1,9 +1,11 @@
-export interface System {
+import { DefaultBreakpoints } from "../responsive/Breakpoints";
+
+export type System = {
 	breakpoints?: Breakpoints;
 	aliases?: Aliases;
 	tokens?: Tokens;
 	elements?: Elements;
-}
+} & {[key:string]: any}
 
 interface Breakpoints {
 	xs: number;
@@ -28,18 +30,18 @@ interface Tokens {
 }
 
 interface PropertyTokens {
-	[key: string]: PropertyValue | BreakpointValue;
+	[key: string]: PropertyValue | BreakpointValues<PropertyValue>;
 }
 
 type PropertyValue = number | string | boolean;
 
-type BreakpointValue = {
-	xs?: PropertyValue;
-	sm?: PropertyValue;
-	md?: PropertyValue;
-	lg?: PropertyValue;
-	xl?: PropertyValue;
-	xxl?: PropertyValue;
+export type BreakpointValues<T> = {
+	xs?: T;
+	sm?: T;
+	md?: T;
+	lg?: T;
+	xl?: T;
+	xxl?: T;
 }
 
 interface Elements {
@@ -47,31 +49,24 @@ interface Elements {
 }
 
 interface Element {
-	[key:string]: PropertyValue | BreakpointValue | StateProperties | ModifierProperties
+	[key:string]: PropertyValue | BreakpointValues<PropertyValue> | StateProperties | ModifierProperties
 }
 
 interface StateProperties {
-	[key:string]: PropertyValue | BreakpointValue
+	[key:string]: PropertyValue | BreakpointValues<PropertyValue>
 }
 
 interface ModifierProperties {
 	[key:string]: {
-		[key:string]: PropertyValue | BreakpointValue | StateProperties
+		[key:string]: PropertyValue | BreakpointValues<PropertyValue> | StateProperties
 	}
 }
 
 export const ExampleSystem:System =     {
-	"breakpoints": {
-		"xs": 576,
-		"sm": 576,
-		"md": 768,
-		"lg": 992,
-		"xl": 1200,
-		"xxl": 1400
-	},
+	breakpoints: DefaultBreakpoints,
 	"aliases": {
 		"tokens": {
-			"colors": [
+			"color": [
 				"backgroundColor",
 				"color"
 			],
@@ -85,7 +80,7 @@ export const ExampleSystem:System =     {
 		}
 	},
 	"tokens": {
-		"colors": {
+		"color": {
 			"primary": "blue",
 			"primaryDark": "darkblue",
 			"danger": "red",
@@ -99,7 +94,7 @@ export const ExampleSystem:System =     {
 			"sm": 3,
 			"md": 6
 		},
-		"sizes": {
+		"size": {
 			"controlRegularHeight": 40,
 			"controlLargeHeight": 50
 		},
