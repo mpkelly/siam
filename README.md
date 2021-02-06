@@ -363,6 +363,74 @@ elements
     ...
 ```
 
+## Siam's standard schema
+
+Above we've been using Siam's standard System Schema. This schema is expected by Siam's standard target adapters but if you're writing your own adapter then you can define your System anyway you like. For now, let's take a look at the shape of Siam's standard schema.
+
+```TypeScript
+export interface System {
+	breakpoints?: Breakpoints;
+	aliases?: Aliases;
+	tokens?: Tokens;
+	elements?: Elements;
+}
+
+interface Breakpoints {
+	xs: number;
+	sm: number;
+	md: number;
+	lg: number;
+	xl: number;
+	xxl: number;
+}
+
+interface Aliases {
+	tokens?: Alias;
+	property?: Alias;
+}
+
+interface Alias {
+	[key:string]: string[];
+}
+
+interface Tokens {
+	[key:string]:PropertyTokens;
+}
+
+interface PropertyTokens {
+	[key: string]: PropertyValue | BreakpointValue;
+}
+
+type PropertyValue = number | string | boolean;
+
+type BreakpointValue = {
+	xs?: PropertyValue;
+	sm?: PropertyValue;
+	md?: PropertyValue;
+	lg?: PropertyValue;
+	xl?: PropertyValue;
+	xxl?: PropertyValue;
+}
+
+interface Elements {
+	[key:string]: Element;
+}
+
+interface Element {
+	[key:string]: PropertyValue | BreakpointValue | StateProperties | ModifierProperties
+}
+
+interface StateProperties {
+	[key:string]: PropertyValue | BreakpointValue
+}
+
+interface ModifierProperties {
+	[key:string]: {
+		[key:string]: PropertyValue | BreakpointValue | StateProperties
+	}
+}        
+```  
+
 # Contributing
 
 1. At the project root run `npm install` to install `lerna`
