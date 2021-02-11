@@ -1,11 +1,10 @@
 # Siam - a platform agnostic way to define component libraries
 
-Siam allows you to define design tokens and elements (e.g. buttons, checkboxes etc) in a way that is platform agnostic. The tokens and elements are defined in a System file which can be converted into something usable: CSS, React components etc. You can create your system from scratch, use a pre-defined system or compose one from Siam's library of tokens and elements.
+Siam allows you to define design tokens and elements (e.g. buttons, checkboxes etc) in a way that is platform agnostic. The tokens and elements are defined in a System file which can be converted into a target platform: CSS, React components etc. You can create your own System file from scratch, use a pre-defined system or compose one from Siam's library of tokens and elements.
 
 ## What kind of problems does it solve?
 
-- Serves as a master source for design tokens and elements. Target multiple SDKs from the same single source. 
-- The libraries we use change often: Angular 1, React JS, Angular 2, Vue etc; but the component styles we use are stable: solid buttons, round buttons, outline button etc. Each time a new library emerges, Siam just needs an adapter to convert existing Systems into usable code for that library.
+- Siam serves as a master source for design tokens and elements. With the same System file, you can target multiple SDKs and platforms. The libraries we use change often, e.g. Angular 1, React JS, Angular 2 and Vue etc; but the component styles we use are stable: solid buttons, round buttons, outline button etc. Each time a new library emerges, Siam just needs an adapter to convert existing Systems into usable code for that library.
 - Tired of every app or site looking like Popular Component library with the only the color scheme changed? Siam makes it easy to quickly create something unique. You can also combine existing library tokens and elements into your own unique System.
 - Siam is designer and developer friendly. Everyone can use the same master source.
 
@@ -14,9 +13,11 @@ Siam allows you to define design tokens and elements (e.g. buttons, checkboxes e
 - Know what [Design Tokens](https://spectrum.adobe.com/page/design-tokens/) are
 - Knowledge of an object data format like [JSON or XML](https://beginnersbook.com/2015/04/json-tutorial/)
 
+Yup, that's it! That's all you need to know to learn about Siam
+
 ## What does it look like?
 
-At the heart of Siam is a System file. Let's start with a basic System written in JSON. 
+At the heart of Siam is a System file. Let's start with a basic System file written in JSON.
 
 ```JSON
 {
@@ -29,7 +30,7 @@ At the heart of Siam is a System file. Let's start with a basic System written i
 }
 ```
 
-The above doesn't define much but it is still a valid System. You can take this file and export it to one or more Targets. Let's see some example outputs:
+The above define the tokens `primary` and `primaryText` which are color tokens. With the above tokens, you can take the System file and export it to one or more Targets. Let's see some example outputs:
 
 ```JavaScript
 // A JavaScript object that could used as a theme with libraries like Emotion or Styled Components
@@ -39,7 +40,7 @@ const Theme = {
        primaryText: "black"
     }
 }
-``` 
+```
 
 ```XML
 /** An android Colors resource file **/
@@ -48,9 +49,9 @@ const Theme = {
     <color name="primary">blue</color>
     <color name="primaryText">black</color>
 </resources>
-``` 
+```
 
-Developers that know JavaScript can easily register their own adapter plugin which can target any platform or SDK they want, including custom systems. Here we are just outputting code but Siam could just as easily output Figma or Sketch files for designers to use as their starting point. 
+Developers that know JavaScript can easily register their own adapter plugin which can target any platform or SDK they want, including custom systems. The example here is just outputing code but Siam could just as easily output Figma or Sketch files for designers to use as their starting point.
 
 ## How can you define Systems?
 
@@ -60,10 +61,10 @@ You can write JSON, JavaScript or TypeScript. You can also use Siam's internal t
 tokens
     colors
         primary blue
-        lightText white 
+        lightText white
 ```
 
-Siam also provides an editor with validation and code completion which makes creating new Systems very efficient. 
+Siam also provides an editor with validation and code completion which makes creating new Systems very efficient.
 
 ## A closer look at the System schema
 
@@ -72,11 +73,11 @@ As well as tokens we can create elements and aliases in our System. A slightly m
 ```YAML
 aliases
     tokens
-        colors backgroundColor,color 
+        colors backgroundColor,color
 tokens
     colors
         primary blue
-        lightText white 
+        lightText white
 elements
     button
         color lightText
@@ -86,19 +87,19 @@ elements
 
 #### A breakdown of the System above
 
-Aliases map element property names onto token objects. The above System uses common names from CSS: `background-color` and `color` but in camel-case. The adapter code that will convert this system to something usable needs this mapping to be able to look-up color tokens. You can see that button `backgroundColor` property is "primary" which is a color token above. We need an alias here because colors can be mapped onto many properties: `color`, `backgroundColor`, `leftBorderColor` etc. In general, the token name should be named exactly as the property it maps to e.g. `borderRadius`. This convention means that you will not need so many token aliases in your System. Let's add `borderRadius` now: 
+Aliases map element property names onto token objects. The above System uses common names from CSS: `background-color` and `color` but in camel-case. The adapter code that will convert this system to something usable needs this mapping to be able to look-up color tokens. You can see that button `backgroundColor` property is "primary" which is a color token above. We need an alias here because colors can be mapped onto many properties: `color`, `backgroundColor`, `leftBorderColor` etc. In general, the token name should be named exactly as the property it maps to e.g. `borderRadius`. This convention means that you will not need so many token aliases in your System. Let's add `borderRadius` now:
 
 ```YAML
 aliases
     tokens
-        colors backgroundColor,color 
+        colors backgroundColor,color
 tokens
     colors
         primary blue
         lightText white
     borderRadius # New tokens
         sm 3
-        md 6 
+        md 6
 elements
     button
         color lightText
@@ -133,31 +134,31 @@ Many elements have different states: disabled, focus, hover etc. Some elements a
 aliases
     tokens
         colors backgroundColor,color
-        sizes width,height 
+        sizes width,height
 tokens
     colors
         primary blue
         danger red
         lightText white
-    borderRadius 
+    borderRadius
         sm 3
-        md 6 
+        md 6
     sizes # new tokens. Like colors, sizes can map onto many properties so we need an alias above
         controlRegularHeight 40
         controlLargeHeight 50
 elements
     button
-        borderRadius sm 
+        borderRadius sm
         color lightText
         roles # new modifier for roles
           primary # new role type - primary.
-            backgroundColor primary  
+            backgroundColor primary
           danger # like primary above
-            backgroundColor danger    
+            backgroundColor danger
         size # new modifier for size
-          regular 
+          regular
             height controlRegularHeight
-          large 
+          large
             height controlLargeHeight
 ```
 
@@ -174,7 +175,7 @@ This is still a very basic System but it can now produce multiple buttons styles
     --size-control-height-large: 50px;
 }
 
-button {    
+button {
     color: var(--color-light-text);
     border-radius: var(--border-radius-sm);
 }
@@ -213,12 +214,11 @@ The above is just for illustration purposes. A good Target adapter will default 
 
 We will now modify our System so that the buttons support states. We will just add the hover state for now. Notice that we use a colon before the state name? This is the same as in CSS.
 
-
 ```YAML
 aliases
     tokens
         colors backgroundColor,color
-        sizes width,height 
+        sizes width,height
 tokens
     colors
         primary blue
@@ -226,18 +226,18 @@ tokens
         danger red
         dangerDark darkred
         lightText white
-    borderRadius 
+    borderRadius
         sm 3
-        md 6 
-    sizes 
+        md 6
+    sizes
         controlRegularHeight 40
         controlLargeHeight 50
 elements
     button
-        borderRadius sm 
-        color lightText        
-        roles 
-          primary 
+        borderRadius sm
+        color lightText
+        roles
+          primary
             backgroundColor primary
             :hover # change background on hover
               backgroundColor primaryDark
@@ -245,10 +245,10 @@ elements
             backgroundColor danger
             :hover # as above
               backgroundColor dangerDark
-        size 
-          regular 
+        size
+          regular
             height controlRegularHeight
-          large 
+          large
             height controlLargeHeight
 ```
 
@@ -267,7 +267,7 @@ And here's the output:
     --size-control-height-large: 50px;
 }
 
-button {    
+button {
     color: var(--color-light-text);
     border-radius: var(--border-radius-sm);
 }
@@ -277,7 +277,7 @@ button.primary {
 }
 
 /** Our new hover style **/
-button.primary:hover { 
+button.primary:hover {
     background-color: var(--color-primary-dark);
 }
 
@@ -299,7 +299,7 @@ button.large {
 }
 ```
 
-To wrap-up, we've covered tokens, token aliases and elements that used modifiers and states. Siam can do even more but even with just the above you can define complex design systems. 
+To wrap-up, we've covered tokens, token aliases and elements that used modifiers and states. Siam can do even more but even with just the above you can define complex design systems.
 
 ## Other considerations
 
@@ -321,7 +321,7 @@ These breakpoints can be used on token values and property values. Let's take a 
 ```YAML
 aliases
     tokens
-        colors backgroundColor,color 
+        colors backgroundColor,color
 tokens
     colors
         primary blue
@@ -332,15 +332,15 @@ tokens
           md 3 # on screens >= 768px wide, use 3px borderRadius
           xl 5 # on screens >= 1200px wide, use 5px borderRadius
         md
-          xs 5 
+          xs 5
           md 6
-          xl 8 
+          xl 8
 elements
     button
         color lightText
         backgroundColor primary
         borderRadius sm # same as before but the value of `sm` will depend on the device width
-        height 
+        height
           xs 40 # default the height to 40px
           lg 50 # on screens >= 992px wide, use 50px height
 ```
@@ -356,7 +356,7 @@ breakpoints
     xl 1300
     xxl 1500
 aliases
-    ... 
+    ...
 tokens
     ...
 elements
@@ -428,13 +428,13 @@ interface ModifierProperties {
 	[key:string]: {
 		[key:string]: PropertyValue | BreakpointValue | StateProperties
 	}
-}        
-```  
+}
+```
 
 # Contributing
 
 1. At the project root run `npm install` to install `lerna`
 2. Next run `npx lerna bootstrap` to install dependencies for `<root>/packages/*`.
-3. Navigate to the package, e.g. `cd packages/siam`, and then use `tsdx` commands to develop and test the package, as shown [here](https://github.com/formium/tsdx#quick-start) 
+3. Navigate to the package, e.g. `cd packages/siam`, and then use `tsdx` commands to develop and test the package, as shown [here](https://github.com/formium/tsdx#quick-start)
 
-Please add new packages using [tsdx](https://github.com/formium/tsdx#npm-start-or-yarn-start) to keep things consistent. You can run `npx tsdx create package-name` in the `<root>/packages` folder to create a new lerna package.  
+Please add new packages using [tsdx](https://github.com/formium/tsdx#npm-start-or-yarn-start) to keep things consistent. You can run `npx tsdx create package-name` in the `<root>/packages` folder to create a new lerna package.
