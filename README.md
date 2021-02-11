@@ -1,11 +1,10 @@
 # Siam - a platform agnostic way to define component libraries
 
-Siam allows you to define design tokens and elements (e.g. buttons, checkboxes etc) in a way that is platform agnostic. The tokens and elements are defined in a System file which can be converted into something usable: CSS, React components etc. You can create your system from scratch, use a pre-defined system or compose one from Siam's library of tokens and elements.
+Siam allows you to define design tokens and elements (e.g. buttons, checkboxes etc) in a way that is platform agnostic. The tokens and elements are defined in a System file which can be converted into a target platform: CSS, React components etc. You can create your own System file from scratch, use a pre-defined system or compose one from Siam's library of tokens and elements.
 
 ## What kind of problems does it solve?
 
-- Serves as a master source for design tokens and elements. Target multiple SDKs from the same single source.
-- The libraries we use change often: Angular 1, React JS, Angular 2, Vue etc; but the component styles we use are stable: solid buttons, round buttons, outline button etc. Each time a new library emerges, Siam just needs an adapter to convert existing Systems into usable code for that library.
+- Siam serves as a master source for design tokens and elements. With the same System file, you can target multiple SDKs and platforms. The libraries we use change often, e.g. Angular 1, React JS, Angular 2 and Vue etc; but the component styles we use are stable: solid buttons, round buttons, outline button etc. Each time a new library emerges, Siam just needs an adapter to convert existing Systems into usable code for that library.
 - Tired of every app or site looking like Popular Component library with the only the color scheme changed? Siam makes it easy to quickly create something unique. You can also combine existing library tokens and elements into your own unique System.
 - Siam is designer and developer friendly. Everyone can use the same master source.
 
@@ -14,9 +13,11 @@ Siam allows you to define design tokens and elements (e.g. buttons, checkboxes e
 - Know what [Design Tokens](https://spectrum.adobe.com/page/design-tokens/) are
 - Knowledge of an object data format like [JSON or XML](https://beginnersbook.com/2015/04/json-tutorial/)
 
+Yup, that's it! That's all you need to know to learn about Siam
+
 ## What does it look like?
 
-At the heart of Siam is a System file. Let's start with a basic System written in JSON.
+At the heart of Siam is a System file. Let's start with a basic System file written in JSON.
 
 ```JSON
 {
@@ -29,7 +30,7 @@ At the heart of Siam is a System file. Let's start with a basic System written i
 }
 ```
 
-The above doesn't define much but it is still a valid System. You can take this file and export it to one or more Targets. Let's see some example outputs:
+The above define the tokens `primary` and `primaryText` which are color tokens. With the above tokens, you can take the System file and export it to one or more Targets. Let's see some example outputs:
 
 ```JavaScript
 // A JavaScript object that could used as a theme with libraries like Emotion or Styled Components
@@ -50,7 +51,7 @@ const Theme = {
 </resources>
 ```
 
-Developers that know JavaScript can easily register their own adapter plugin which can target any platform or SDK they want, including custom systems. Here we are just outputting code but Siam could just as easily output Figma or Sketch files for designers to use as their starting point.
+Developers that know JavaScript can easily register their own adapter plugin which can target any platform or SDK they want, including custom systems. The example here is just outputing code but Siam could just as easily output Figma or Sketch files for designers to use as their starting point.
 
 ## How can you define Systems?
 
@@ -427,8 +428,8 @@ interface ModifierProperties {
 	[key:string]: {
 		[key:string]: PropertyValue | BreakpointValue | StateProperties
 	}
-}        
-```  
+}
+```
 
 # Contributing
 
