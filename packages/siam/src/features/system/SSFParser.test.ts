@@ -1,5 +1,3 @@
-import { parseSSFContent } from "./SSFParser";
-
 const System = `
 breakpoints
 	xs 576
@@ -66,9 +64,9 @@ elements
 				height controlRegularHeight	
 `.trim();
 
-describe("blah", () => {
-	it("works", () => {
-		console.log(JSON.stringify(parseSSFContent(System), null, 2));
-		expect(2).toEqual(2);
-	});
+describe('blah', () => {
+  it('works', () => {
+    //console.log(JSON.stringify(parseSSFContent(System), null, 2));
+    expect(2).toEqual(2);
+  });
 });

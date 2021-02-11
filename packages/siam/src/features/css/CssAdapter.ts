@@ -11,6 +11,10 @@ export const Projects: ProjectDescriptor[] = [
     description:
       'Generate a single CSS file contain only the system tokens as CSS variables.',
   },
+  {
+    name: 'Single file project',
+    description: 'Output a single HTML file which includes inline CSS',
+  },
 ];
 
 export const CssAdapter: PlatformAdapter = {
@@ -25,18 +29,40 @@ export const CssAdapter: PlatformAdapter = {
         description: 'System tokens as CSS Variables',
         contents: generateCssVariables(system),
       },
+      {
+        name: 'elements.css',
+        description: 'System elements as CSS',
+        contents: generateCssVariables(system),
+      },
+      {
+        name: 'index.html',
+        description: 'Single file project',
+        contents: generateSingleFileProject(system),
+      },
     ];
   },
 
   generateProject(system: System, name: string) {
-    //TODO create project assets
-    console.log(system);
-    return { assets: [], name, description: 'description' };
+    const project = this.availableProjects().find(
+      (project) => project.name === name
+    );
+
+    const allAssets = this.generateAssets(system);
+
+    if (project?.name === 'CSS Variables') {
+      const assets = [{ ...allAssets[0], path: '/' }];
+      return { assets, name, description: project.description };
+    } else if (project?.name === 'Single file project') {
+      const allAssets = this.generateAssets(system);
+      const assets = [{ ...allAssets[2], path: '/' }];
+      return { assets, name, description: project.description };
+    }
+    throw new Error(`No project named ${name}`);
   },
 };
 
 const createVariable = (property: string, tokenName: string, value: any) => {
-  return `--${camelToHyphen(property)}-${camelToHyphen(tokenName)}:${value}`;
+  return `--${camelToHyphen(property)}-${camelToHyphen(tokenName)}:${value};`;
 };
 
 export const generateCssVariables = (system: System) => {
@@ -79,7 +105,7 @@ export const generateCssVariables = (system: System) => {
       const breakWidth = (breakpoints as any)[breakpoint];
       const values = (breakValues as any)[breakpoint];
       if (values.length) {
-        const body = values.join(';\n');
+        const body = values.join('\n');
         if (breakWidth === 0) {
           output.push(body);
         } else {
@@ -89,7 +115,36 @@ export const generateCssVariables = (system: System) => {
     });
     const body = output.join('\n');
 
-    return `:root{ ${body} }`;
+    return `:root{\n ${body} \n}`;
   }
   return '';
+};
+
+const generateSingleFileProject = (system: System) => {
+  const variables = generateCssVariables(system);
+  const css = `
+			<style>${variables}</style>
+		`;
+  return generateHtmlIndexFile('', css);
+};
+
+const generateHtmlIndexFile = (body = '', head = '') => {
+  return `
+		<!doctype html>
+
+		<html lang="en">
+		<head>
+			<meta charset="utf-8">
+		
+			<title>Siam HTML & CSS project</title>
+		
+			${head}
+		
+		</head>
+		
+		<body>
+			${body}
+		</body>
+		</html>
+		`;
 };
