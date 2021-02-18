@@ -101,31 +101,47 @@ const getRootSelector = (system: System) => {
   return `:root{ ${root} }`
 }
 
-const getElementSelectors = (system: System) => {
-  if (!system.elements) {
-    return null
-  }
-  const { elements } = system
-  const elemsStr: string[] = []
-  Object.keys(elements).map((e) => {
-    const props = elements[e]
-    const propsStr: string[] = []
-    Object.keys(props).map((p) => {
-      const tokenName = props[p]
-      if (!isObject(tokenName)) {
-        const propStr = createProperty(p, tokenName as string)
-        propsStr.push(propStr)
-      }
-    })
-    const body = propsStr.join(";\n")
-    const elemStr = `${e} { ${body} }`
-    elemsStr.push(elemStr)
+const getSelectorCSS = (value: any, key: string, level: number) => {
+  const allCss: string[] = []
+  const propsCss: string[] = []
+  const objectCss: string[] = []
+  Object.keys(value).map((k) => {
+    const v = value[k]
+    if (level === 0 && isObject(v)) {
+      /* handle variants */
+      objectCss.push(getSelectorCSS(v, key, ++level))
+    } else if (k[0] === ":") {
+      /* handle states */
+      objectCss.push(getSelectorCSS(v, `${key}${k}`, ++level))
+    } else if (isObject(v)) {
+      /* handle modifiers */
+      objectCss.push(getSelectorCSS(v, `${key}.${k}`, ++level))
+    } else {
+      /* handle properties */
+      propsCss.push(createProperty(k, v as string))
+    }
   })
-  return elemsStr.join("\n")
+  const body = propsCss.join(";\n")
+  const elemStr = body ? `${key} {\n${body};\n}` : ""
+  allCss.push(elemStr)
+  allCss.push(...objectCss)
+  return allCss.join("\n")
+}
+
+const getElementsCSS = (system: System) => {
+  const elementCss: string[] = []
+  const { elements }: any = system
+  Object.keys(elements).map((e) => {
+    const value = elements[e]
+    elementCss.push(getSelectorCSS(value, e, 0))
+  })
+  const allElementsCss = elementCss.join("\n")
+  return allElementsCss
 }
 
 export const generateCssVariables = (system: System) => {
   const root = getRootSelector(system)
-  const elements = getElementSelectors(system)
+  const elements = getElementsCSS(system)
   return `${root}\n${elements}`
 };
+
