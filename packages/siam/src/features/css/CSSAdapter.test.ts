@@ -1,11 +1,10 @@
 import { ExampleSystem } from '../system/StandardSystem';
-import { createOutputSystem } from '../system/OutputSystem';
+import { CssAdapter } from './CssAdapter';
 
 describe('blah', () => {
   it('works', () => {
-    console.log(
-      JSON.stringify(createOutputSystem(ExampleSystem).elements, null, 2)
-    );
+    const assets = CssAdapter.generateAssets(ExampleSystem);
+    console.log(assets)
     expect(2).toEqual(2);
   });
 });

@@ -49,10 +49,10 @@ interface Elements {
 
 interface Element {
   [key: string]:
-    | PropertyValue
-    | BreakpointValues<PropertyValue>
-    | StateProperties
-    | ModifierProperties;
+  | PropertyValue
+  | BreakpointValues<PropertyValue>
+  | StateProperties
+  | ModifierProperties;
 }
 
 interface StateProperties {
@@ -62,9 +62,9 @@ interface StateProperties {
 interface ModifierProperties {
   [key: string]: {
     [key: string]:
-      | PropertyValue
-      | BreakpointValues<PropertyValue>
-      | StateProperties;
+    | PropertyValue
+    | BreakpointValues<PropertyValue>
+    | StateProperties;
   };
 }
 
@@ -134,31 +134,31 @@ export const ExampleSystem: System = {
         },
       },
     },
-    // input: {
-    //   borderRadius: 'sm',
-    //   color: 'primaryText',
-    //   borderStyle: 'line',
-    //   borderWidth: 'regular',
-    //   borderColor: 'transparent',
-    //   roles: {
-    //     primary: {
-    //       backgroundColor: 'secondaryBackground',
-    //       ':hover': {
-    //         borderColor: 'primary',
-    //       },
-    //       ':focus': {
-    //         borderColor: 'primary',
-    //       },
-    //     },
-    //   },
-    //   size: {
-    //     regular: {
-    //       height: 'controlRegularHeight',
-    //     },
-    //     large: {
-    //       height: 'controlLargeHeight',
-    //     },
-    //   },
-    // },
+    input: {
+      borderRadius: 'sm',
+      color: 'primaryText',
+      borderStyle: 'line',
+      borderWidth: 'regular',
+      borderColor: 'transparent',
+      roles: {
+        primary: {
+          backgroundColor: 'secondaryBackground',
+          ':hover': {
+            borderColor: 'primary',
+          },
+          ':focus': {
+            borderColor: 'primary',
+          },
+        },
+      },
+      size: {
+        regular: {
+          height: 'controlRegularHeight',
+        },
+        large: {
+          height: 'controlLargeHeight',
+        },
+      },
+    },
   },
 };
