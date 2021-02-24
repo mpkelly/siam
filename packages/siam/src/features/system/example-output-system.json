@@ -1,0 +1,772 @@
+{
+  "batchedTokens": [
+    {
+      "breakpoint": 0,
+      "values": [
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "primary",
+          "hyphenName": "primary",
+          "value": "blue"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "primaryDark",
+          "hyphenName": "primary-dark",
+          "value": "darkblue"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "danger",
+          "hyphenName": "danger",
+          "value": "red"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "dangerDark",
+          "hyphenName": "danger-dark",
+          "value": "darkred"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "primaryText",
+          "hyphenName": "primary-text",
+          "value": "black"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "lightText",
+          "hyphenName": "light-text",
+          "value": "white"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "primaryBackground",
+          "hyphenName": "primary-background",
+          "value": "white"
+        },
+        {
+          "property": "color",
+          "hyphenProperty": "color",
+          "name": "secondaryBackground",
+          "hyphenName": "secondary-background",
+          "value": "#E4E4E4"
+        },
+        {
+          "name": "sm",
+          "hyphenName": "sm",
+          "value": 3,
+          "property": "borderRadius",
+          "hyphenProperty": "border-radius"
+        },
+        {
+          "property": "borderRadius",
+          "hyphenProperty": "border-radius",
+          "name": "md",
+          "hyphenName": "md",
+          "value": 6
+        },
+        {
+          "property": "size",
+          "hyphenProperty": "size",
+          "name": "controlRegularHeight",
+          "hyphenName": "control-regular-height",
+          "value": "40px"
+        },
+        {
+          "property": "size",
+          "hyphenProperty": "size",
+          "name": "controlLargeHeight",
+          "hyphenName": "control-large-height",
+          "value": "50px"
+        },
+        {
+          "property": "borderWidth",
+          "hyphenProperty": "border-width",
+          "name": "regular",
+          "hyphenName": "regular",
+          "value": "2px"
+        }
+      ]
+    },
+    {
+      "breakpoint": 768,
+      "values": [
+        {
+          "name": "sm",
+          "hyphenName": "sm",
+          "value": 6,
+          "property": "borderRadius",
+          "hyphenProperty": "border-radius"
+        }
+      ]
+    }
+  ],
+  "groupedTokens": [
+    {
+      "name": "primary",
+      "hyphenName": "primary",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "blue"
+        }
+      ]
+    },
+    {
+      "name": "primaryDark",
+      "hyphenName": "primary-dark",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "darkblue"
+        }
+      ]
+    },
+    {
+      "name": "danger",
+      "hyphenName": "danger",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "red"
+        }
+      ]
+    },
+    {
+      "name": "dangerDark",
+      "hyphenName": "danger-dark",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "darkred"
+        }
+      ]
+    },
+    {
+      "name": "primaryText",
+      "hyphenName": "primary-text",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "black"
+        }
+      ]
+    },
+    {
+      "name": "lightText",
+      "hyphenName": "light-text",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "white"
+        }
+      ]
+    },
+    {
+      "name": "primaryBackground",
+      "hyphenName": "primary-background",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "white"
+        }
+      ]
+    },
+    {
+      "name": "secondaryBackground",
+      "hyphenName": "secondary-background",
+      "property": "color",
+      "hyphenProperty": "color",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "#E4E4E4"
+        }
+      ]
+    },
+    {
+      "name": "sm",
+      "hyphenName": "sm",
+      "property": "borderRadius",
+      "hyphenProperty": "border-radius",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "sm",
+      "hyphenName": "sm",
+      "property": "borderRadius",
+      "hyphenProperty": "border-radius",
+      "values": [
+        {
+          "breakpoint": 768,
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "md",
+      "hyphenName": "md",
+      "property": "borderRadius",
+      "hyphenProperty": "border-radius",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "controlRegularHeight",
+      "hyphenName": "control-regular-height",
+      "property": "size",
+      "hyphenProperty": "size",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "40px"
+        }
+      ]
+    },
+    {
+      "name": "controlLargeHeight",
+      "hyphenName": "control-large-height",
+      "property": "size",
+      "hyphenProperty": "size",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "50px"
+        }
+      ]
+    },
+    {
+      "name": "regular",
+      "hyphenName": "regular",
+      "property": "borderWidth",
+      "hyphenProperty": "border-width",
+      "values": [
+        {
+          "breakpoint": 0,
+          "value": "2px"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "name": "button",
+      "hyphenName": "button",
+      "groupedProperties": [
+        {
+          "modifier": "",
+          "state": "",
+          "properties": [
+            {
+              "name": "borderRadius",
+              "hyphenName": "border-radius",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "sm",
+                  "tokenValue": {
+                    "name": "sm",
+                    "hyphenName": "sm",
+                    "property": "borderRadius",
+                    "hyphenProperty": "border-radius",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": 3
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "color",
+              "hyphenName": "color",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "lightText",
+                  "tokenValue": {
+                    "name": "lightText",
+                    "hyphenName": "light-text",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "white"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modifier": "role=primary",
+          "state": "",
+          "properties": [
+            {
+              "name": "backgroundColor",
+              "hyphenName": "background-color",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "primary",
+                  "tokenValue": {
+                    "name": "primary",
+                    "hyphenName": "primary",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "blue"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "padding",
+              "hyphenName": "padding",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "8px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modifier": "role=primary",
+          "state": ":hover",
+          "properties": [
+            {
+              "name": "backgroundColor",
+              "hyphenName": "background-color",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "primaryDark",
+                  "tokenValue": {
+                    "name": "primaryDark",
+                    "hyphenName": "primary-dark",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "darkblue"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modifier": "role=danger",
+          "state": "",
+          "properties": [
+            {
+              "name": "backgroundColor",
+              "hyphenName": "background-color",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "danger",
+                  "tokenValue": {
+                    "name": "danger",
+                    "hyphenName": "danger",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "red"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "padding",
+              "hyphenName": "padding",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "8px"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modifier": "role=danger",
+          "state": ":hover",
+          "properties": [
+            {
+              "name": "backgroundColor",
+              "hyphenName": "background-color",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "dangerDark",
+                  "tokenValue": {
+                    "name": "dangerDark",
+                    "hyphenName": "danger-dark",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "darkred"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modifier": "size=regular",
+          "state": "",
+          "properties": [
+            {
+              "name": "height",
+              "hyphenName": "height",
+              "values": [
+                {
+                  "breakpoint": 576,
+                  "value": "controlRegularHeight",
+                  "tokenValue": {
+                    "name": "controlRegularHeight",
+                    "hyphenName": "control-regular-height",
+                    "property": "size",
+                    "hyphenProperty": "size",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "40px"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "breakpoint": 768,
+                  "value": "controlLargeHeight",
+                  "tokenValue": {
+                    "name": "controlLargeHeight",
+                    "hyphenName": "control-large-height",
+                    "property": "size",
+                    "hyphenProperty": "size",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "50px"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "modifier": "size=large",
+          "state": "",
+          "properties": [
+            {
+              "name": "height",
+              "hyphenName": "height",
+              "values": [
+                {
+                  "breakpoint": 0,
+                  "value": "controlLargeHeight",
+                  "tokenValue": {
+                    "name": "controlLargeHeight",
+                    "hyphenName": "control-large-height",
+                    "property": "size",
+                    "hyphenProperty": "size",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "50px"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "batchedProperties": [
+        {
+          "breakpoint": 0,
+          "values": [
+            {
+              "modifier": "",
+              "state": "",
+              "properties": [
+                {
+                  "name": "borderRadius",
+                  "hyphenName": "border-radius",
+                  "value": "sm",
+                  "tokenValue": {
+                    "name": "sm",
+                    "hyphenName": "sm",
+                    "property": "borderRadius",
+                    "hyphenProperty": "border-radius",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": 3
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "color",
+                  "hyphenName": "color",
+                  "value": "lightText",
+                  "tokenValue": {
+                    "name": "lightText",
+                    "hyphenName": "light-text",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "white"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "modifier": "role=primary",
+              "state": "",
+              "properties": [
+                {
+                  "name": "backgroundColor",
+                  "hyphenName": "background-color",
+                  "value": "primary",
+                  "tokenValue": {
+                    "name": "primary",
+                    "hyphenName": "primary",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "blue"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "padding",
+                  "hyphenName": "padding",
+                  "value": "8px"
+                }
+              ]
+            },
+            {
+              "modifier": "role=primary",
+              "state": ":hover",
+              "properties": [
+                {
+                  "name": "backgroundColor",
+                  "hyphenName": "background-color",
+                  "value": "primaryDark",
+                  "tokenValue": {
+                    "name": "primaryDark",
+                    "hyphenName": "primary-dark",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "darkblue"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "modifier": "role=danger",
+              "state": "",
+              "properties": [
+                {
+                  "name": "backgroundColor",
+                  "hyphenName": "background-color",
+                  "value": "danger",
+                  "tokenValue": {
+                    "name": "danger",
+                    "hyphenName": "danger",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "red"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "padding",
+                  "hyphenName": "padding",
+                  "value": "8px"
+                }
+              ]
+            },
+            {
+              "modifier": "role=danger",
+              "state": ":hover",
+              "properties": [
+                {
+                  "name": "backgroundColor",
+                  "hyphenName": "background-color",
+                  "value": "dangerDark",
+                  "tokenValue": {
+                    "name": "dangerDark",
+                    "hyphenName": "danger-dark",
+                    "property": "color",
+                    "hyphenProperty": "color",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "darkred"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "modifier": "size=large",
+              "state": "",
+              "properties": [
+                {
+                  "name": "height",
+                  "hyphenName": "height",
+                  "value": "controlLargeHeight",
+                  "tokenValue": {
+                    "name": "controlLargeHeight",
+                    "hyphenName": "control-large-height",
+                    "property": "size",
+                    "hyphenProperty": "size",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "50px"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "breakpoint": 576,
+          "values": [
+            {
+              "modifier": "size=regular",
+              "state": "",
+              "properties": [
+                {
+                  "value": "controlRegularHeight",
+                  "tokenValue": {
+                    "name": "controlRegularHeight",
+                    "hyphenName": "control-regular-height",
+                    "property": "size",
+                    "hyphenProperty": "size",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "40px"
+                      }
+                    ]
+                  },
+                  "name": "height",
+                  "hyphenName": "height"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "breakpoint": 768,
+          "values": [
+            {
+              "modifier": "size=regular",
+              "state": "",
+              "properties": [
+                {
+                  "value": "controlLargeHeight",
+                  "tokenValue": {
+                    "name": "controlLargeHeight",
+                    "hyphenName": "control-large-height",
+                    "property": "size",
+                    "hyphenProperty": "size",
+                    "values": [
+                      {
+                        "breakpoint": 0,
+                        "value": "50px"
+                      }
+                    ]
+                  },
+                  "name": "height",
+                  "hyphenName": "height"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

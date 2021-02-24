@@ -1,0 +1,22 @@
+:root {
+  --color-primary: blue;
+  --color-primary-dark: darkblue;
+  --color-danger: red;
+  --color-danger-dark: darkred;
+  --color-primary-text: black;
+  --color-light-text: white;
+  --color-primary-background: white;
+  --color-secondary-background: #E4E4E4;
+  --border-radius-sm: 3;
+  --border-radius-md: 6;
+  --size-control-regular-height: 40px;
+  --size-control-large-height: 50px;
+  --border-width-regular: 2px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --color-red: blue;
+  }
+}
+

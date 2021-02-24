@@ -4,13 +4,27 @@ import {
   isBreakpointValues,
 } from '../responsive/Breakpoints';
 import { isObject } from '../util/Object';
+import { camelToHyphen } from '../util/ConvertCase';
 
 export const createOutputSystem = (system: System): OutputSystem => {
   const breakpoints = system.breakpoints || DefaultBreakpoints;
-  const batchedTokens: Batch<BatchToken>[] = [{ breakpoint: 0, values: [] }];
+  const { aliases = {} } = system;
+  const tokenAliases = aliases.tokens || {};
+  const batchedTokens: Batch<Token>[] = [{ breakpoint: 0, values: [] }];
   const groupedTokens: GroupedToken[] = [];
-
   const { tokens = {} } = system;
+
+  const findAlias = (property: string) => {
+    let result = property;
+    Object.keys(tokenAliases).forEach((alias) => {
+      const values = tokenAliases[alias];
+      if (values.includes(property)) {
+        result = alias;
+      }
+    });
+    return result;
+  };
+
   Object.keys(tokens).forEach((property) => {
     const value = tokens[property];
     Object.keys(value).forEach((token) => {
@@ -25,10 +39,18 @@ export const createOutputSystem = (system: System): OutputSystem => {
           const value = (tokenValue as any)[breakpoint];
           batchedTokens
             .find((batch) => batch.breakpoint === breakWidth)
-            ?.values.push({ name: token, value, property });
+            ?.values.push({
+              name: token,
+              hyphenName: camelToHyphen(token),
+              value,
+              property,
+              hyphenProperty: camelToHyphen(property),
+            });
           groupedTokens.push({
             name: token,
+            hyphenName: camelToHyphen(token),
             property,
+            hyphenProperty: camelToHyphen(property),
             values: [{ breakpoint: breakWidth, value }],
           });
         });
@@ -36,12 +58,16 @@ export const createOutputSystem = (system: System): OutputSystem => {
         //it's just a single value for all breakpoints
         batchedTokens[0]?.values.push({
           property,
+          hyphenProperty: camelToHyphen(property),
           name: token,
+          hyphenName: camelToHyphen(token),
           value: value[token],
         });
         groupedTokens.push({
           name: token,
+          hyphenName: camelToHyphen(token),
           property,
+          hyphenProperty: camelToHyphen(property),
           values: [{ breakpoint: 0, value: value[token] }],
         });
       }
@@ -66,16 +92,29 @@ export const createOutputSystem = (system: System): OutputSystem => {
             group = { modifier, state, properties: [] };
             groupedProperties.push(group);
           }
+
+          let tokenProperty = findAlias(property.split('=')[0]);
+
           if (isObject(value)) {
             if (isBreakpointValues(value)) {
               const values = Object.keys(value).map((breakpoint) => {
+                const breakValue = value[breakpoint];
+                const tokenValue = groupedTokens.find(
+                  (token) =>
+                    token.property === tokenProperty &&
+                    token.name === breakValue
+                );
+
                 return {
                   breakpoint: (breakpoints as any)[breakpoint],
-                  value: value[breakpoint],
+                  value: breakValue,
+                  tokenValue,
                 };
               });
+
               group.properties.push({
                 name: property,
+                hyphenName: camelToHyphen(property),
                 values,
               });
 
@@ -101,9 +140,19 @@ export const createOutputSystem = (system: System): OutputSystem => {
                   group = { modifier, state, properties: [] };
                   batch.values.push(group);
                 }
+
+                const breakValue = value[breakpoint];
+                const tokenValue = groupedTokens.find(
+                  (token) =>
+                    token.property === tokenProperty &&
+                    token.name === breakValue
+                );
+
                 group.properties.push({
-                  value: value[breakpoint],
+                  value: breakValue,
+                  tokenValue,
                   name: property,
+                  hyphenName: camelToHyphen(property),
                 });
               });
             } else if (String(property).startsWith(':')) {
@@ -126,20 +175,32 @@ export const createOutputSystem = (system: System): OutputSystem => {
               batchGroup = { modifier, state, properties: [] };
               batchedProperties[0].values.push(batchGroup);
             }
+            const tokenValue = groupedTokens.find(
+              (token) =>
+                token.property === tokenProperty && token.name === value
+            );
             batchGroup.properties.push({
               name: property,
+              hyphenName: camelToHyphen(property),
               value,
+              tokenValue,
             });
 
             group.properties.push({
               name: property,
-              values: [{ breakpoint: 0, value }],
+              hyphenName: camelToHyphen(property),
+              values: [{ breakpoint: 0, value, tokenValue }],
             });
           }
         });
       };
       findProperties((system.elements || {})[element]);
-      return { name: element, groupedProperties, batchedProperties };
+      return {
+        name: element,
+        hyphenName: camelToHyphen(element),
+        groupedProperties,
+        batchedProperties,
+      };
     }
   );
 
@@ -155,20 +216,25 @@ interface Batch<T> {
   values: T[];
 }
 
-interface BatchToken {
+interface Token {
   name: string;
+  hyphenName: string;
   value: any;
   property: string;
+  hyphenProperty: string;
 }
 
 interface GroupedToken {
   name: string;
+  hyphenName: string;
   property: string;
+  hyphenProperty: string;
   values: { breakpoint: number; value: any }[];
 }
 
 interface Element {
   name: string;
+  hyphenName: string;
   groupedProperties: ElementPropertyGroup[];
   batchedProperties: Batch<BatchedElementProperty>[];
 }
@@ -181,7 +247,9 @@ interface BatchedElementProperty {
 
 interface ElementProperty {
   name: string;
+  hyphenName: string;
   value: any;
+  tokenValue?: GroupedToken;
 }
 
 interface ElementPropertyGroup {
@@ -192,11 +260,12 @@ interface ElementPropertyGroup {
 
 interface ElementBreakProperty {
   name: string;
-  values: { breakpoint: number; value: any }[];
+  hyphenName: string;
+  values: { breakpoint: number; value: any; tokenValue?: GroupedToken }[];
 }
 
 export interface OutputSystem {
-  batchedTokens: Batch<BatchToken>[];
+  batchedTokens: Batch<Token>[];
   groupedTokens: GroupedToken[];
   elements: Element[];
 }

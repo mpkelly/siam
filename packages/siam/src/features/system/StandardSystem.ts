@@ -73,7 +73,7 @@ export const ExampleSystem: System = {
   aliases: {
     tokens: {
       color: ['backgroundColor', 'color'],
-      sizes: ['width', 'height'],
+      size: ['width', 'height'],
     },
   },
   tokens: {
