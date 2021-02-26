@@ -1,0 +1,66 @@
+button {
+    border-radius: var(--border-radius-sm);
+    color: var(--color-light-text);
+}
+
+button[role=primary] {
+    background-color: var(--color-primary);
+    padding: 8px;
+}
+
+button[role=primary]:hover {
+    background-color: var(--color-primary-dark);
+}
+
+button[role=danger] {
+    background-color: var(--color-danger);
+    padding: 8px;
+}
+
+button[role=danger]:hover {
+    background-color: var(--color-danger-dark);
+}
+
+button[size=large] {
+    height: var(--size-control-large-height);
+}
+
+@media (max-width: 576px) {
+    button[size=regular] {
+        height: var(--size-control-regular-height);
+    }
+}
+
+@media (max-width: 768px) {
+    button[size=regular] {
+        height: var(--size-control-large-height);
+    }
+}
+
+input {
+    border-radius: var(--border-radius-sm);
+    color: var(--color-primary-text);
+    border-style: solid;
+    border-width: var(--border-width-regular);
+    border-color: transparent;
+}
+
+input[role=primary] {
+    background-color: var(--color-secondary-background);
+}
+
+input[role=primary]:hover {
+    border-color: var(--color-primary);
+}
+
+input[role=primary]:focus {
+    border-color: var(--color-primary);
+}
+
+input[size=regular] {
+    height: var(--size-control-regular-height);
+}
+
+input[size=large] {
+    height: var(--size-control-large-height);
+}

@@ -11,14 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter2.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/variables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/system/example-output-system.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/elements.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/adapter/PlatformAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/adapter/PlatformAdapter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/system/OutputSystem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/system/OutputSystem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter2.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CssAdapter.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSystem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSystem.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +49,6 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="run.prettier.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/packages/siam/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -84,7 +82,9 @@
       <workItem from="1613049292258" duration="5482000" />
       <workItem from="1613094276568" duration="542000" />
       <workItem from="1613390760505" duration="1587000" />
-      <workItem from="1614161825071" duration="6567000" />
+      <workItem from="1614161825071" duration="7340000" />
+      <workItem from="1614257903611" duration="5523000" />
+      <workItem from="1614303193659" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Start on README docs">
       <created>1611741733738</created>
@@ -177,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613017913204</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add support to createOutputSystem for:&#10;- hyphenated names&#10;- token mappings">
+      <created>1614171173441</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1614171173441</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +214,8 @@
     <MESSAGE value="(feat) make a start on the CssAdapter which will allow for building apps with HTML + CSS using a system based on CSS variables and will also serve as an example for other adapter implementations." />
     <MESSAGE value="Reformat code" />
     <MESSAGE value="(feat) add OutputSystem to make it easier to write adapters. CssAdapter.ts has not been updated to use this system, yet." />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add OutputSystem to make it easier to write adapters. CssAdapter.ts has not been updated to use this system, yet." />
+    <MESSAGE value="Add support to createOutputSystem for:&#10;- hyphenated names&#10;- token mappings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add support to createOutputSystem for:&#10;- hyphenated names&#10;- token mappings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1203" y="118" key="#CSS" timestamp="1613093598743">
@@ -248,18 +256,18 @@
     </state>
     <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1613093579069" />
     <state x="352" y="162" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1612605967351" />
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1613017935615">
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1614171182065">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1613017935615" />
+    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614171182065" />
     <state x="420" y="245" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612606132398" />
     <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614170932454">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
     <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614170932454" />
-    <state x="-1295" y="122" width="670" height="676" key="search.everywhere.popup" timestamp="1613050460859">
+    <state x="-1295" y="122" width="670" height="676" key="search.everywhere.popup" timestamp="1614259450877">
       <screen x="-1920" y="-113" width="1920" height="1057" />
     </state>
-    <state x="-1295" y="122" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1613050460859" />
+    <state x="-1295" y="122" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614259450877" />
   </component>
 </project>

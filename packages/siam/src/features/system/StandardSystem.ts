@@ -49,10 +49,10 @@ interface Elements {
 
 interface Element {
   [key: string]:
-  | PropertyValue
-  | BreakpointValues<PropertyValue>
-  | StateProperties
-  | ModifierProperties;
+    | PropertyValue
+    | BreakpointValues<PropertyValue>
+    | StateProperties
+    | ModifierProperties;
 }
 
 interface StateProperties {
@@ -62,9 +62,9 @@ interface StateProperties {
 interface ModifierProperties {
   [key: string]: {
     [key: string]:
-    | PropertyValue
-    | BreakpointValues<PropertyValue>
-    | StateProperties;
+      | PropertyValue
+      | BreakpointValues<PropertyValue>
+      | StateProperties;
   };
 }
 
@@ -72,7 +72,7 @@ export const ExampleSystem: System = {
   breakpoints: DefaultBreakpoints,
   aliases: {
     tokens: {
-      color: ['backgroundColor', 'color'],
+      color: ['backgroundColor', 'color', 'borderColor'],
       size: ['width', 'height'],
     },
   },
@@ -137,10 +137,10 @@ export const ExampleSystem: System = {
     input: {
       borderRadius: 'sm',
       color: 'primaryText',
-      borderStyle: 'line',
+      borderStyle: 'solid',
       borderWidth: 'regular',
       borderColor: 'transparent',
-      roles: {
+      role: {
         primary: {
           backgroundColor: 'secondaryBackground',
           ':hover': {
