@@ -7,7 +7,7 @@ import { Asset } from './Asset';
  * file according to the `path` specified in each `ProjectAsset`. It's recommended to provide
  * multiple project download options so there is flexibility for the end user.
  */
-export type PlatformAdapter = {
+export type Platform = {
   /**
    * Generate a list of assets which can be copied or exported
    * @param system

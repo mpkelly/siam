@@ -11,14 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e25d122-daf9-42d9-b1fe-3fb1796f7d16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/css/elements.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/siam/src/features/export/Zip.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/adapter/Asset.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/platform/Asset.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/adapter/PlatformAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/platform/Platform.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/adapter/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/platform/Project.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter2.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CssAdapter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSystem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/system/StandardSystem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/src/features/css/CSSAdapter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/siam/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/siam/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <workItem from="1613390760505" duration="1587000" />
       <workItem from="1614161825071" duration="7340000" />
       <workItem from="1614257903611" duration="5523000" />
-      <workItem from="1614303193659" duration="3038000" />
+      <workItem from="1614303193659" duration="7413000" />
     </task>
     <task id="LOCAL-00001" summary="Start on README docs">
       <created>1611741733738</created>
@@ -184,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614171173441</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="(feat) Update CSSAdapter so it can output elements. Example ouput including in elements.css; remove old CSSAdapater code.">
+      <created>1614340795851</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1614340795851</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,59 +224,7 @@
     <MESSAGE value="Reformat code" />
     <MESSAGE value="(feat) add OutputSystem to make it easier to write adapters. CssAdapter.ts has not been updated to use this system, yet." />
     <MESSAGE value="Add support to createOutputSystem for:&#10;- hyphenated names&#10;- token mappings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add support to createOutputSystem for:&#10;- hyphenated names&#10;- token mappings" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="-1203" y="118" key="#CSS" timestamp="1613093598743">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1203" y="118" key="#CSS/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1613093598743" />
-    <state x="-1124" y="315" width="780" height="456" key="#Markdown" timestamp="1611660252836">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1124" y="315" width="780" height="456" key="#Markdown/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611660252836" />
-    <state x="-1240" y="246" key="#Notifications" timestamp="1612869108058">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1240" y="246" key="#Notifications/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612869108058" />
-    <state x="-1252" y="91" width="919" height="649" key="#TypeScript" timestamp="1611982646353">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1252" y="91" width="919" height="649" key="#TypeScript/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1611982646353" />
-    <state x="492" y="303" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612602568520">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="-1264" y="224" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1612589398253" />
-    <state x="492" y="303" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1612602568520" />
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser" timestamp="1612599323301">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="533" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1612599323301" />
-    <state x="-1538" y="54" key="MergeDialog" timestamp="1614170952691">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1538" y="54" key="MergeDialog/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614170952691" />
-    <state x="-1320" y="184" key="MultipleFileMergeDialog" timestamp="1613017930768">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1320" y="184" key="MultipleFileMergeDialog/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1613017930768" />
-    <state x="-1451" y="54" key="SettingsEditor" timestamp="1613093579069">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1451" y="54" key="SettingsEditor/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1613093579069" />
-    <state x="352" y="162" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1612605967351" />
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2" timestamp="1614171182065">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1360" y="155" key="Vcs.Push.Dialog.v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614171182065" />
-    <state x="420" y="245" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1612606132398" />
-    <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614170932454">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1159" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614170932454" />
-    <state x="-1295" y="122" width="670" height="676" key="search.everywhere.popup" timestamp="1614259450877">
-      <screen x="-1920" y="-113" width="1920" height="1057" />
-    </state>
-    <state x="-1295" y="122" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-1920.-113.1920.1057@-1920.-113.1920.1057" timestamp="1614259450877" />
+    <MESSAGE value="(feat) Update CSSAdapter so it can output elements. Example ouput including in elements.css; remove old CSSAdapater code." />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) Update CSSAdapter so it can output elements. Example ouput including in elements.css; remove old CSSAdapater code." />
   </component>
 </project>

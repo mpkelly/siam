@@ -1,7 +1,7 @@
-import { PlatformAdapter } from '../adapter/PlatformAdapter';
+import { Platform } from '../platform/Platform';
 import { OutputSystem } from '../system/OutputSystem';
 
-export const createCssPlatform = (system: OutputSystem): PlatformAdapter => {
+export const createCssPlatform = (system: OutputSystem): Platform => {
   const assets = [
     {
       name: 'variables.css',
@@ -13,8 +13,25 @@ export const createCssPlatform = (system: OutputSystem): PlatformAdapter => {
       description: 'System elements as CSS',
       contents: generateElements(system),
     },
+    {
+      name: 'index.html',
+      description: 'Basic HTML file that imports ',
+      contents: IndexHtmlFile,
+    },
   ];
-  return { assets, projects: [] };
+  const projects = [
+    {
+      name: 'HTML & CSS starter project',
+      description: 'A simple starter for HTML & CSS development',
+      assets: [
+        { ...assets[0], path: '/css' },
+        { ...assets[1], path: '/css' },
+        { ...assets[2], path: '/' },
+      ],
+    },
+  ];
+
+  return { assets, projects };
 };
 
 const createVariable = (property: string, tokenName: string, value: any) => {
@@ -91,3 +108,24 @@ export const generateElements = (system: OutputSystem) => {
   });
   return elements.join('\n');
 };
+
+const IndexHtmlFile = `
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Siam App</title>
+  <meta name="author" content="Siam - platform agnostic components and styles">
+
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/variables.css">
+
+</head>
+
+<body>
+  
+</body>
+</html>
+`;
